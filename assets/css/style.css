@@ -1,0 +1,282 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #f39c12;
+    --text-color: #ecf0f1;
+    --quote-color: #6c757d;
+    --background-color: #34495e;
+    --navbar-color: rgba(44, 62, 80, 0.8);
+}
+
+* {
+    color: var(--text-color);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color);
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.navbar {
+    background-color: var(--navbar-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--secondary-color) !important;
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+.carousel img {
+    border-radius: 20px;
+    animation: fadeIn 1s ease;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-inner {
+    border-radius: 20px;
+    animation: fadeIn 1s ease;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.col-md-4 {
+    flex: 1 1 calc(33.333% - 16px);
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 1s ease;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card-compra {
+    height: 350px;
+}
+
+.card-img-top {
+    border-radius: 15px;
+    height: 175px;
+    width: 175px;
+    margin: 15px auto 0 auto;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: auto;
+}
+
+.body-compra {
+    padding: 5px;
+}
+
+.card-text.opinion {
+    margin-top: 10px;
+}
+
+.blockquote-footer {
+    padding: 0;
+    margin-top: auto;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+    color: var(--text-color);
+    transform: scale(1.1);
+}
+
+.btn-compra {
+    width: 175px;
+    margin: auto;
+}
+
+.btn.btn-warning.btn-lg {
+    animation: bounce 2s infinite;
+}
+
+footer {
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e67e22;
+}
+
+.compra {
+    padding: 50px 20px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+}
+
+.img-fluid {
+    margin: auto;
+}
+
+.category {
+    color: var(--quote-color);
+}
+
+.text-warning {
+    color: var(--secondary-color) !important;
+}
+
+.features {
+    padding: 50px 20px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+}
+
+.features h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+.feature-card {
+    background-color: var(--background-color);
+    height: 250px;
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.feature-text {
+    margin: auto;
+}
+
+@media (max-width: 1023px) {
+    .col-md-4 {
+        flex: 1 1 calc(50% - 16px);
+    }
+
+    .carousel img {
+        height: 400px;
+    }
+
+    .feature-card {
+        height: 275px;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 1 1 calc(100% - 16px);
+    }
+
+    .carousel img {
+        height: 300px;
+    }
+
+    .img-fluid {
+        width: 350px;
+        height: 350px;
+    }
+
+    .feature-card {
+        background-color: var(--background-color);
+        height: 200px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
